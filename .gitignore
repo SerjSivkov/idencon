@@ -1,0 +1,7 @@
+/tmp/
+.idea/
+
+
+# rspec failure tracking
+.rspec_status
+.rakeTasks
