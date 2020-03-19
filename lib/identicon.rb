@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'chunky_png'
+require 'digest/md5'
 
 class Identicon
   def initialize(user_name, path = nil)
@@ -9,6 +10,7 @@ class Identicon
   end
 
   def generate
+
     puts "YOU ARE AWESOME!!"
   end
 
