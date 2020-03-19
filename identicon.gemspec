@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'identicon/enums'
+
 Gem::Specification.new do |spec|
   spec.name = %q{identicon}
-  spec.version = '0.0.0'
+  spec.version = Identicon::Enums::VERSION
   spec.authors = ['Sergey Sivkov']
   spec.email = ['serjsivkov@gmail.com']
   spec.date = %q{2020-03-19}

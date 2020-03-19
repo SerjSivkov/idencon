@@ -2,6 +2,7 @@
 
 require 'chunky_png'
 require 'digest/md5'
+require 'identicon/enums'
 
 class Identicon
   def initialize(user_name, path = nil)
