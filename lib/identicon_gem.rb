@@ -1,13 +1,21 @@
-module IdenticonGem
-  class Identicon
-    def initialize(user_name, path = nil); end
+# frozen_string_literal: true
 
-    def generate
-      puts "YOU ARE AWESOME!!"
-    end
+require 'chunky_png'
 
-    private
+class Identicon
+  def initialize(user_name, path = nil)
+    @user_name = user_name
+    @path = path
+  end
 
-    def save_image!; end
+  def generate
+    puts "YOU ARE AWESOME!!"
+  end
+
+  private
+
+  attr_reader :user_name, :path
+
+  def save_image!;
   end
 end
