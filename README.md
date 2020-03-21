@@ -1,4 +1,4 @@
-# Identicon
+# Idencon
 
 This gem convert a string name to an Identicon image
 
@@ -7,7 +7,7 @@ This gem convert a string name to an Identicon image
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'identicon'
+gem 'idencon'
 ```
 
 And then execute:
@@ -19,13 +19,13 @@ $ bundle
 Or install:
 
 ```bash
-$ gem install identicon
+$ gem install idencon
 ```
 
 ## Usage
 
 ```ruby
-identicon = Identicon.new(user_name, path)
+identicon = Idencon::Identicon.new(user_name, path)
 identicon.generate
 ```
 

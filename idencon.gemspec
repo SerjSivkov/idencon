@@ -2,18 +2,18 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'identicon/enums'
+require 'idencon/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'identicon'
-  spec.version = Identicon::Enums::VERSION
+  spec.name = 'idencon'
+  spec.version = Idencon::VERSION
   spec.author = 'Sergey Sivkov'
   spec.email = 'serjsivkov@gmail.com'
-  spec.homepage = 'https://github.com/SerjSivkov/identicon'
+  spec.homepage = 'https://github.com/SerjSivkov/idencon'
   spec.date = %q{2020-03-19}
   spec.license = 'MIT'
-  spec.summary = %q{Identicon - generate image by name}
-  spec.files = ['lib/identicon.rb']
+  spec.summary = %q{Idencon - generate image by name}
+  spec.files = Dir['{lib}/**/*.rb', '{lib}/*.rb', 'LICENSE', 'README.md']
   spec.require_paths = ['lib']
 
   spec.add_dependency 'chunky_png', '~> 1.3', '>= 1.3.5'
