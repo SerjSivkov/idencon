@@ -9,6 +9,7 @@ Gem::Specification.new do |spec|
   spec.version = Identicon::Enums::VERSION
   spec.author = 'Sergey Sivkov'
   spec.email = 'serjsivkov@gmail.com'
+  spec.homepage = 'https://github.com/SerjSivkov/identicon'
   spec.date = %q{2020-03-19}
   spec.license = 'MIT'
   spec.summary = %q{Identicon - generate image by name}
