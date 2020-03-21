@@ -12,8 +12,10 @@ Gem::Specification.new do |spec|
   spec.date = %q{2020-03-19}
   spec.summary = %q{Identicon - generate image by name}
   spec.files = [
-    'lib/identicon_gem.rb'
+    'lib/identicon.rb'
   ]
   spec.require_paths = ['lib']
+
   spec.add_dependency 'chunky_png'
+  spec.add_development_dependency 'bundler'
 end

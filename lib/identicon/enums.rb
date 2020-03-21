@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require 'chunky_png'
+
 module Identicon
   module Enums
-    VERSION = '0.0.0'
+    VERSION = '0.1.0'
 
     class Image
       SQUARE_SIZE = 250
