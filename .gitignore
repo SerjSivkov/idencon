@@ -2,6 +2,6 @@
 .idea/
 *.gem
 
-# rspec failure tracking
+.byebug_history
 .rspec_status
 .rakeTasks

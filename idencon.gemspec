@@ -13,6 +13,9 @@ Gem::Specification.new do |spec|
   spec.date = %q{2020-03-19}
   spec.license = 'MIT'
   spec.summary = %q{Idencon - generate image by name}
+
+  spec.bindir = 'exe'
+  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.files = Dir['{lib}/**/*.rb', '{lib}/*.rb', 'LICENSE', 'README.md']
   spec.require_paths = ['lib']
 
