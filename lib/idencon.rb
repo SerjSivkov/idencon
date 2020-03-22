@@ -37,6 +37,7 @@ module Idencon
 
     def draw_texture
       matrix.each_with_index do |array_value, row_index|
+        array_value = transform_column_array(array_value)
         array_value.each_with_index do |value, column_index|
           draw_square(value, row_index, column_index)
         end
@@ -50,6 +51,19 @@ module Idencon
     def matrix
       matrix = hash_digest.each_slice(Idencon::Enums::Image::COLUMN_COUNT)
       matrix.to_a[0...Idencon::Enums::Image::COLUMN_COUNT]
+    end
+
+    def transform_column_array(array)
+      index = 0
+      while index < middle_index
+        array[-(index + 1)] = array[index]
+        index += 1
+      end
+      array
+    end
+
+    def middle_index
+      @middle_index ||= Idencon::Enums::Image::COLUMN_COUNT / 2 + Idencon::Enums::Image::COLUMN_COUNT % 2
     end
 
     def draw_square(value, row_index, column_index)
