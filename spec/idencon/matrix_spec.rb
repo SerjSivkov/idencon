@@ -19,13 +19,15 @@ RSpec.describe Idencon::Matrix do
   describe '#transform_column_array' do
     context 'transform array' do
       it 'even-length array transformation' do
-        array = [1,2,4,5]
-        expect(described_class.transform_column_array(array)).to eq([1, 2, 2, 1])
+        array = [1, 2, 4, 5]
+        expect(described_class.transform_column_array(array))
+          .to eq([1, 2, 2, 1])
       end
 
       it 'odd-length array transformation' do
-        array = [1,2,3,4,5]
-        expect(described_class.transform_column_array(array)).to eq([1, 2, 3, 2, 1])
+        array = [1, 2, 3, 4, 5]
+        expect(described_class.transform_column_array(array))
+          .to eq([1, 2, 3, 2, 1])
       end
     end
   end

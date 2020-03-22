@@ -3,6 +3,8 @@
 require 'idencon/enums'
 
 module Idencon
+  ##
+  # class for working with a random set of values in a matrix
   class Matrix
     class << self
       def generate_matrix(hash_digest)
@@ -22,7 +24,8 @@ module Idencon
       private
 
       def middle_column_array_index
-        @middle_index ||= Idencon::Enums::Image::COLUMN_COUNT / 2 + Idencon::Enums::Image::COLUMN_COUNT % 2
+        @middle_column_array_index ||= Idencon::Enums::Image::COLUMN_COUNT / 2 +
+                                       Idencon::Enums::Image::COLUMN_COUNT % 2
       end
     end
   end

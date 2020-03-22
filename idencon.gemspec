@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'idencon/version'
 
@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.author = 'Sergey Sivkov'
   spec.email = 'serjsivkov@gmail.com'
   spec.homepage = 'https://github.com/SerjSivkov/idencon'
-  spec.date = %q{2020-03-19}
+  spec.date = '2020-03-19'
   spec.license = 'MIT'
-  spec.summary = %q{Idencon - generate image by name}
+  spec.summary = 'Idencon - generate image by name'
 
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }

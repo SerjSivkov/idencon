@@ -6,6 +6,8 @@ require 'idencon/enums'
 require 'idencon/matrix'
 
 module Idencon
+  ##
+  # class for generate image by @user_name
   class Identicon
     BACKGROUND_COLOR = ChunkyPNG::Color.rgb(255, 255, 255)
 
@@ -55,12 +57,10 @@ module Idencon
 
     def draw_square(value, row_index, column_index)
       color = paint_pixel?(value) ? texture_color : BACKGROUND_COLOR
-      image.rect(
-        column_index * Idencon::Enums::Image::PIXEL_SIZE, row_index * Idencon::Enums::Image::PIXEL_SIZE,
-        (column_index + 1) * Idencon::Enums::Image::PIXEL_SIZE, (row_index + 1) * Idencon::Enums::Image::PIXEL_SIZE,
-        ChunkyPNG::Color::TRANSPARENT,
-        color
-      )
+      image.rect(coordinate(column_index), coordinate(row_index),
+                 coordinate(column_index + 1), coordinate(row_index + 1),
+                 ChunkyPNG::Color::TRANSPARENT,
+                 color)
     end
 
     def paint_pixel?(byte)
@@ -70,6 +70,10 @@ module Idencon
     def texture_color
       red, green, blue = hash_digest[0..2]
       ChunkyPNG::Color.rgb(red, green, blue)
+    end
+
+    def coordinate(index)
+      index * Idencon::Enums::Image::PIXEL_SIZE
     end
 
     def hash_digest
